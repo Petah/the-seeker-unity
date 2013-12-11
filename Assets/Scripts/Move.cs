@@ -5,12 +5,16 @@ public class Move : MonoBehaviour {
 
 	public float moveSpeed = 50;
 
-	public void Start () {
+	public void Start() {
 	
 	}
 	
-	public void Update () {
-	
+	public void Update() {
+		if (Input.GetAxis("Vertical") > 0.02f) {
+			this.rigidbody.AddForce(transform.forward * moveSpeed);
+		} else if (Input.GetAxis("Vertical") < -0.02f) {
+			this.rigidbody.AddForce(transform.forward * -moveSpeed);
+		}
 	}
 
 }
