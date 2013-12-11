@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Move : MonoBehaviour {
 
-	public float moveSpeed = 50;
+	public float moveSpeed = 5;
 
 	public void Start() {
 	
@@ -14,6 +14,10 @@ public class Move : MonoBehaviour {
 			this.rigidbody.AddForce(transform.up * -moveSpeed);
 		} else if (Input.GetAxis("Vertical") < -0.02f) {
 			this.rigidbody.AddForce(transform.up * moveSpeed);
+		} else if (Input.GetAxis("Horizontal") > 0.02f) {
+			this.rigidbody.AddForce(transform.right * moveSpeed);
+		} else if (Input.GetAxis("Horizontal") < -0.02f) {
+			this.rigidbody.AddForce(transform.right * -moveSpeed);
 		}
 	}
 
