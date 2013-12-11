@@ -11,9 +11,9 @@ public class Move : MonoBehaviour {
 	
 	public void Update() {
 		if (Input.GetAxis("Vertical") > 0.02f) {
-			this.rigidbody.AddForce(transform.forward * moveSpeed);
+			this.rigidbody.AddForce(transform.up * -moveSpeed);
 		} else if (Input.GetAxis("Vertical") < -0.02f) {
-			this.rigidbody.AddForce(transform.forward * -moveSpeed);
+			this.rigidbody.AddForce(transform.up * moveSpeed);
 		}
 	}
 
