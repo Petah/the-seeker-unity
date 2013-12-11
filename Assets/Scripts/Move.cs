@@ -14,7 +14,8 @@ public class Move : MonoBehaviour {
 			this.rigidbody.AddForce(transform.up * -moveSpeed);
 		} else if (Input.GetAxis("Vertical") < -0.02f) {
 			this.rigidbody.AddForce(transform.up * moveSpeed);
-		} else if (Input.GetAxis("Horizontal") > 0.02f) {
+		}
+		if (Input.GetAxis("Horizontal") > 0.02f) {
 			this.rigidbody.AddForce(transform.right * moveSpeed);
 		} else if (Input.GetAxis("Horizontal") < -0.02f) {
 			this.rigidbody.AddForce(transform.right * -moveSpeed);
