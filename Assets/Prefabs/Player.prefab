@@ -13,7 +13,6 @@ GameObject:
   - 95: {fileID: 9500000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
-  - 65: {fileID: 6500000}
   - 54: {fileID: 5400000}
   m_Layer: 0
   m_Name: Player
@@ -76,18 +75,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
---- !u!65 &6500000
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.20771122, y: 2.00000191, z: 2.00000095}
-  m_Center: {x: .0649924278, y: -4.11439601e-07, z: -3.36295933e-14}
 --- !u!95 &9500000
 Animator:
   serializedVersion: 2
